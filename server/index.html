@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <base href="/" />
+    <title>Recipe Box</title>
+
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="build.css" />
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="build.js"></script>
+</head>
+
+<body ng-app="RecipeBox">
+    <navbar></navbar>
+    <div class='title'>RECIPE BOX</div>
+    <div ui-view class="container"></div>
+</body>
+
+</html>

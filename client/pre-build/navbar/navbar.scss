@@ -1,0 +1,33 @@
+.navbar {
+	border-radius: 0;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+  }
+}
+
+nav.navbar {
+    border-bottom: solid 1px black;
+}
+
+
+.logo {
+  display: block;
+  margin-right: 7px;
+  margin-top: 8px;
+  //display: block;
+  width: 35px;
+  // img {
+  //   display: block;
+  //   width: 50%;
+  // }
+  @media (max-width: 768px) {
+    margin-left: 15px;
+  }
+}
+
