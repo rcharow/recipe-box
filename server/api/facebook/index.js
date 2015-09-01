@@ -1,8 +1,8 @@
-var express = require('express')
-var router = express.Router()
-var passport = require('passport')
-var FacebookStrategy = require('passport-facebook').Strategy
-var User = require('../../db/models/user.js').User
+var express = require('express');
+var router = express.Router();
+var passport = require('passport');
+var FacebookStrategy = require('passport-facebook').Strategy;
+var User = require('../../db/models/user.js').User;
 
 
 var config = require('../../config');
@@ -16,7 +16,8 @@ passport.use(
 	function (accessToken, refreshToken, profile, done) {
 		// register this person as a user
 		// find or create facebook user by profile id
-		console.log('IN FACEBOOK VERIFY FUNCTION')
+		console.log('in verify function');
+		console.log("PROFILE: ",profile);
 		User.findOne({facebook: {id: profile.id}}).exec(function (err, user) {
 			if (err) done(err);
 			else if (user) done(null, user);
@@ -25,8 +26,8 @@ passport.use(
 					facebook: {
 						id: profile.id,
 						token: accessToken,
-						name: profile.name.givenName + ' ' + profile.name.familyName,
-						email: profile.emails[0].value
+						name: profile.displayName,//profile.name.givenName + ' ' + profile.name.familyName,
+						email: profile.email
 					}
 				}, done);
 			}
@@ -46,9 +47,11 @@ router.get('/', passport.authenticate('facebook', {
 	scope: 'email'
 }));
 
-router.get('/callback?token', passport.authenticate('facebook', {
+router.get('/callback', passport.authenticate('facebook', {
 	failureRedirect: '/login',
-	successRedirect: '/'
+	successRedirect: '/',
+	failureFlash: true,
+	successFlash: true
 }));
 
 router.use(function (err,req,res,next){

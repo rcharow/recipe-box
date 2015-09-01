@@ -70,13 +70,14 @@ var directories = fs.readdirSync(path.join(__dirname, '/api/'));
 // Require each route dynamically 
 directories.forEach(function(dir) {
   // Prepend /api/ to all api routes
+  console.log("ROUTE: ",'/api/'+dir+'/');
   app.use('/api/' + dir + '/', require('./api/' + dir));
 });
 
 
 //// Index/Home
 app.use('/', function(req, res, next) {
-  console.log("ABOUT TO SEND INDEX");
+  console.log("REQ USER",req.user)
   res.sendFile(path.join(__dirname, './index.html'));
 });
 
@@ -91,6 +92,7 @@ app.use(function(req, res, next) {
 
 //// Server issues
 app.use(function(err, req, res, next) {
+  console.log('SERVER ERROR:', err);
   res.sendStatus(err.status || 500);
 
 });

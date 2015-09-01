@@ -1,10 +1,8 @@
-var mongoose = require('mongoose')
-var db = mongoose.connection
+var mongoose = require('mongoose');
+var db = mongoose.connection;
 
-mongoose.connect('mongodb://localhost/recipe-box')
-db.on('error',console.error.bind(console, 'MongoDb connection error'))
-
-console.log('DB CONNECTED')
+mongoose.connect('mongodb://localhost/recipe-box');
+db.on('error',console.error.bind(console, 'MongoDb connection error'));
 
 var UserSchema = new mongoose.Schema({
 	userName: {type: String},
@@ -13,12 +11,13 @@ var UserSchema = new mongoose.Schema({
         id: String,
         token: String,
         name: String,
-        email: String
+        email: String,
+        openId: String
     }
-})
+});
 
-var User = mongoose.model('User',UserSchema)
+var User = mongoose.model('User',UserSchema);
 
 module.exports = {
 	User: User
-}
+};
