@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
-var User = require('../../db/models/user.js').User;
+var User = require('../../db/models/user.js');
 
 
 var config = require('../../config');

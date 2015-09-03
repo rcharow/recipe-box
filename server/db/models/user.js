@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 var db = mongoose.connection;
 
-mongoose.connect('mongodb://localhost/recipe-box');
-db.on('error',console.error.bind(console, 'MongoDb connection error'));
+// mongoose.connect('mongodb://localhost/recipe-box');
+// db.on('error',console.error.bind(console, 'MongoDb connection error'));
 
 var UserSchema = new mongoose.Schema({
 	userName: {type: String},
@@ -18,6 +18,4 @@ var UserSchema = new mongoose.Schema({
 
 var User = mongoose.model('User',UserSchema);
 
-module.exports = {
-	User: User
-};
+module.exports = User;

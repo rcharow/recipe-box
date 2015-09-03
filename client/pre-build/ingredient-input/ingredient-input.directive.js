@@ -1,6 +1,10 @@
-app.directive('ingredient-input',function(){
+app.directive('ingredientInput',function(){
 	return {
 		restrict: 'E',
-		templateUrl: '/prebuild/ingredient-input/ingredient-input.html'
+		templateUrl: '/pre-build/ingredient-input/ingredient-input.html',
+		scope: {
+			units: '=',
+			remove: '&'
+		}
 	}
 });

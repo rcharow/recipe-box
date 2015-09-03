@@ -77,7 +77,7 @@ directories.forEach(function(dir) {
 
 //// Index/Home
 app.use('/', function(req, res, next) {
-  console.log("REQ USER",req.user)
+  // console.log("REQ USER",req.user)
   res.sendFile(path.join(__dirname, './index.html'));
 });
 

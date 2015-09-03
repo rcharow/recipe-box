@@ -1,0 +1,102 @@
+[ 
+  {
+    "unit" : "teaspoon",
+    "plural" : "teaspoons",
+    "system" : "Imperial" 
+  }, 
+  {
+    "unit" : "tablespoon",
+    "plural" : "tablespoons",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "fluid ounce",
+    "plural" : "fluid ounces",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "gill",
+    "plural" : "gills",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "cup",
+    "plural" : "cups",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "pint",
+    "plural" : "pints",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "quart",
+    "plural" : "quarts",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "gallon",
+    "plural" : "gallons",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "ml",
+    "plural" : "ml",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "l",
+    "plural" : "l",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "dl",
+    "plural" : "dl",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "pound",
+    "plural" : "pounds",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "ounce",
+    "plural" : "ounces",
+    "system" : "Imperial"
+  }, 
+  {
+    "unit" : "mg",
+    "plural" : "mg",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "g",
+    "plural" : "g",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "kg",
+    "plural" : "kg",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "mm",
+    "plural" : "mm",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "cm",
+    "plural" : "cm",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "m",
+    "plural" : "m",
+    "system" : "Metric"
+  }, 
+  {
+    "unit" : "inch",
+    "plural" : "inches",
+    "system" : "Imperial"
+  }
+]

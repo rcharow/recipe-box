@@ -3,6 +3,7 @@ var NodeModule = require('./nodemodule.model');
 
 module.exports = {
   index: function (req, res) {
+    console.log('finding node modules');
     NodeModule
       .find()
       .exec()

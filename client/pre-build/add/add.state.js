@@ -6,14 +6,21 @@ app.config(function($stateProvider) {
         resolve: {
         	currentUser: function(AuthFactory,$state){
         		return AuthFactory.authenticatedUser()
-        		.then(function(result){
-                          console.log("RESULT IN ADD RESOLVE", result);
-                          if(!result)
+        		.then(function(user){
+                          if(!user)
                             $state.go('login');
         			else
-                            return result;
+                            return user;
         		});
-        	}
+        	},
+            units: function(RecipeFactory){
+                return RecipeFactory.getUnits();
+
+                // .then(function(units){
+                //     console.log("UNITS IN RESOLVE",units);
+                //     return units;
+                // }
+            }
         }
     });
 });

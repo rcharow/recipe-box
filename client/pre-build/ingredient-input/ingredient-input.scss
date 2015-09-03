@@ -1,4 +1,15 @@
 .ingredient {
-	border: solid 1px gray;
+	border: solid 1px #D2CACA;
 	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 20px;
+	padding-bottom: 0px;
+}
+
+.input-sm {
+	width: 40%;
+}
+
+.remove {
+	margin-left: 15px;
 }

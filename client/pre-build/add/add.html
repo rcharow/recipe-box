@@ -8,24 +8,31 @@
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label for="category" class="col-sm-2 control-label">Recipe Category</label>
+	    <label for="description" class="col-sm-2 control-label">Description</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="description" placeholder="Description">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="category" class="col-sm-2 control-label">Category</label>
 	    <div class="col-sm-10">
 	      <input type="text" class="form-control" id="category" placeholder="Category">
 	    </div>
 	  </div>
-	  <h4>Ingredients</h4>
+	  <h4 class="sectionTitle">Ingredients</h4>
+	  <ingredient-input units="units" remove="removeIngredient($index)" ng-repeat="ingredient in ingredients"></ingredient-input>
+	  <button class="btn btn-default pull-right" ng-click="addIngredient()">Add Ingredient</button>
+	  <h4 class="sectionTitle">Instructions</h4>
+	  <ol>
+	  	<li class="recipe-li" ng-repeat="instruction in instructions">
+	  		<instruction-input remove="removeInstruction($index)"></instruction-input>
+	  	</li>
+	  </ol>
+	  <button class="btn btn-default pull-right" ng-click="addInstruction()">Add Instruction</button>
+	  <h4 class="sectionTitle">Notes</h4>
 	  <div class="form-group">
-	    <div class="col-sm-offset-2 col-sm-10">
-	      <div class="checkbox">
-	        <label>
-	          <input type="checkbox"> Remember me
-	        </label>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <div class="col-sm-offset-2 col-sm-10">
-	      <button type="submit" class="btn btn-default">Sign in</button>
+	    <div class="col-sm-10">
+	      <textarea class="form-control" id="notes" placeholder="Notes"></textarea>
 	    </div>
 	  </div>
 	</form>
