@@ -8,6 +8,7 @@ app.controller('AddRecipeController',function($scope,units){
 
 	$scope.recipeName;
 	$scope.category;
+	$scope.description;
 	$scope.ingredients = [{
 		ingredient: null,
 		quantity: null,
@@ -18,8 +19,10 @@ app.controller('AddRecipeController',function($scope,units){
 		instruction: null
 	}];
 
+	$scope.notes;
+
 	$scope.photoUrl;
-	$scope.tags = [""];
+	$scope.tags = [];
 
 	$scope.addIngredient = function(){
 		$scope.ingredients.push({
@@ -40,6 +43,10 @@ app.controller('AddRecipeController',function($scope,units){
 	};
 
 	$scope.removeInstruction = function(idx){
-		$scope.instruction.splice(idx,1);
+		$scope.instructions.splice(idx,1);
+	}
+
+	$scope.submit = function(){
+		console.log("TAGS: ", $scope.tags);
 	}
 });

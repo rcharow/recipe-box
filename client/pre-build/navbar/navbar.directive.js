@@ -6,6 +6,7 @@ app.directive("navbar", function($rootScope, AuthFactory){
 			scope.currentUser;
 
 			scope.logout = function(){
+				debugger;
 				AuthFactory.logout();
 			};
 

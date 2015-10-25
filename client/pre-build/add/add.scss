@@ -1,7 +1,23 @@
-.sectionTitle {
+.section-title {
 	margin-top: 70px;
 }
 
 .recipe-li {
 	margin-bottom: 10px;
+}
+
+.btn-save {
+	margin-top: 30px;
+}
+
+.tags {
+	li.tag-item {
+		font-family: 'Cutive Mono', ;
+		background-color: #CCC;
+		border-color: #CCC;
+		color:black;
+	}
+	input.input {
+		font-family: 'Cutive Mono', ;		
+	}
 }

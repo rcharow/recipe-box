@@ -12,8 +12,10 @@ app.factory('AuthFactory',function($http,$rootScope,$state){
 	};
 
 	var logout = function(){
+		console.log('About to log out...');
 		$http.get('/api/auth/logout')
 		.then(function(res){
+			debugger;
 			emitCurrentUser();
 			$state.go('login');
 		})
