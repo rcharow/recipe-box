@@ -93,7 +93,9 @@ app.use(function(req, res, next) {
 //// Server issues
 app.use(function(err, req, res, next) {
   console.log('SERVER ERROR:', err);
-  res.sendStatus(err.status || 500);
+  err.status = err.status || 500;
+  res.status(err.status).send(err);
+  // res.sendStatus(err.status || 500);
 
 });
 

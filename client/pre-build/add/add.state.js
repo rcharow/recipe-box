@@ -15,11 +15,6 @@ app.config(function($stateProvider) {
         	},
             units: function(RecipeFactory){
                 return RecipeFactory.getUnits();
-
-                // .then(function(units){
-                //     console.log("UNITS IN RESOLVE",units);
-                //     return units;
-                // }
             }
         }
     });

@@ -3,7 +3,8 @@ app.directive('instructionInput',function(){
 		restrict: 'E',
 		templateUrl: '/pre-build/instruction-input/instruction-input.html',
 		scope: {
-			remove: '&'
+			remove: '&',
+			model: '='
 		}
 	}
 });

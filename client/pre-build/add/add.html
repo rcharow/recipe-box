@@ -1,53 +1,64 @@
 <section>
 	<h3>Add a Recipe:</h3>
 	<form class="form-horizontal" ng-submit="submit()">
-	  <div class="form-group">
-	    <label for="name" class="col-sm-2 control-label">Recipe Name</label>
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="name" placeholder="Name" ng-model="recipeName">
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="description" class="col-sm-2 control-label">Description</label>
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="description" placeholder="Description" ng-model="description">
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="category" class="col-sm-2 control-label">Category</label>
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="category" placeholder="Category" ng-model="category">
-	    </div>
-	  </div>
-	  <h4 class="section-title">Ingredients</h4>
-	  <ingredient-input units="units" remove="removeIngredient($index)" ng-repeat="ingredient in ingredients"></ingredient-input>
-	  <button class="btn btn-default pull-right" ng-click="addIngredient()">Add Ingredient</button>
-	  <h4 class="section-title">Instructions</h4>
-	  <ol>
-	  	<li class="recipe-li" ng-repeat="instruction in instructions">
-	  		<instruction-input remove="removeInstruction($index)"></instruction-input>
-	  	</li>
-	  </ol>
-	  <button class="btn btn-default pull-right" ng-click="addInstruction()">Add Instruction</button>
-	  <h4 class="section-title">Notes</h4>
-	  <div class="form-group">
-	    <div class="col-sm-12">
-	      <textarea class="form-control" id="notes" placeholder="Notes" ng-model="notes"></textarea>
-	    </div>
-	  </div>
-	  <h4 class="section-title">Photo</h4>
-	  <div class="form-group">
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="photo" placeholder="Photo Url" ng-model="photoUrl">
-	    </div>
-	  </div>
-	  <h4 class="section-title">Tags</h4>
-	  <div class="form-group">
-	    <div class="col-sm-10">
-	    <tags-input id="tags" placeholder="Tags" ng-model="tags">
-	    </tags-input>
-	    </div>
-	  </div>
-	  <input type="submit" value="Save" class="btn btn-default pull-right btn-save">
-	</form>
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label">Recipe Name</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="name" placeholder="Name" ng-model="recipeName">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="description" class="col-sm-2 control-label">Description</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="description" placeholder="Description" ng-model="description">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="category" class="col-sm-2 control-label">Category</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="category" placeholder="Category" ng-model="category">
+			</div>
+		</div>
+		<h4 class="section-title">Ingredients</h4>
+
+		<ul> 
+			<li class="recipe-li ingredient-li" ng-repeat="ingredient in ingredients">
+				<ingredient-input 
+				units="units" 
+				index="$index"
+				remove="removeIngredient($index)" 
+				model="ingredient" 
+			</ingredient-input>
+		</li>
+	</ul>
+
+	<button type="button" class="btn btn-default pull-right" ng-click="addIngredient()">Add Ingredient</button>
+	<h4 class="section-title">Instructions</h4>
+	<ol>
+		<li class="recipe-li" ng-repeat="instruction in instructions">
+			<instruction-input model="instruction" remove="removeInstruction($index)"></instruction-input>
+		</li>
+	</ol>
+	<button type="button" class="btn btn-default pull-right" ng-click="addInstruction()">Add Instruction</button>
+	<h4 class="section-title">Notes</h4>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<textarea class="form-control" id="notes" placeholder="Notes" ng-model="notes"></textarea>
+		</div>
+	</div>
+	<h4 class="section-title">Photo</h4>
+	<div class="form-group">
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="photo" placeholder="Photo Url" ng-model="photoUrl">
+		</div>
+	</div>
+	<h4 class="section-title">Tags</h4>
+	<div class="form-group">
+		<div class="col-sm-10">
+			<tags-input id="tags" placeholder="Tags" ng-model="tags">
+		</tags-input>
+	</div>
+</div>
+<input type="submit" value="Save" class="btn btn-default pull-right btn-save">
+</form>
 </section>

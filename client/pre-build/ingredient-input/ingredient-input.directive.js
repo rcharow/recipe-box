@@ -4,7 +4,12 @@ app.directive('ingredientInput',function(){
 		templateUrl: '/pre-build/ingredient-input/ingredient-input.html',
 		scope: {
 			units: '=',
-			remove: '&'
+			remove: '&',
+			index: '=',
+			model: '='
+		},
+		link: function($scope){
+			$scope.ingredient = {};
 		}
 	}
 });

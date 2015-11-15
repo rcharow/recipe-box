@@ -12,11 +12,12 @@ module.exports = {
       .find()
       .exec()
       .then(function(units) {
-        console.log("UNITS", units);
         res.send(units);
       });
  },
  createRecipe: function(req, res, next) {
+    req.body.userId = req.user._id;
+    console.log("Creating recipe: ", req.body);
     Recipe
       .create(req.body, function(err, recipe){
         if(err) return next(err);
