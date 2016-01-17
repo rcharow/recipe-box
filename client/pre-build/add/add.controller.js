@@ -9,11 +9,7 @@ app.controller('AddRecipeController',function($scope,units,AddFactory){
 	$scope.recipeName;
 	$scope.category;
 	$scope.description;
-	$scope.ingredients = [{
-		ingredient: null,
-		quantity: null,
-		unit: null
-	}];
+	$scope.ingredients = [];
 
 	$scope.instructions = [{
 		instruction: null
@@ -25,7 +21,6 @@ app.controller('AddRecipeController',function($scope,units,AddFactory){
 	$scope.tags = [];
 
 	$scope.addIngredient = function(){
-		console.log("Adding ingredient to: ", $scope.ingredients);
 		$scope.ingredients.push({
 			ingredient: null,
 			quantity: null,
